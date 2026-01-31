@@ -229,10 +229,10 @@ notification:
   #   执行时间不稳定，时间范围建议至少留足 2 小时
   # 💡 想要精准定时？建议使用 Docker 部署在个人服务器上
   push_window:
-    enabled: false                    # 是否启用推送时间窗口控制
-    start: "20:00"                    # 开始时间（北京时间）
+    enabled: true                   # 是否启用推送时间窗口控制
+    start: "08:00"                    # 开始时间（北京时间）
     end: "22:00"                      # 结束时间（北京时间）
-    once_per_day: true                # true=窗口内只推送一次，false=窗口内每次执行都推送
+    once_per_day: false                # true=窗口内只推送一次，false=窗口内每次执行都推送
 
   # 推送渠道配置
   channels:
@@ -253,7 +253,7 @@ notification:
     email:
       from: ""                        # 发件人邮箱地址
       password: ""                    # 发件人邮箱密码或授权码
-      to: ""                          # 收件人邮箱，多个用逗号分隔
+      到: ""                          # 收件人邮箱，多个用逗号分隔
       smtp_server: ""                 # SMTP 服务器（可选，留空自动识别）
       smtp_port: ""                   # SMTP 端口（可选，留空自动识别）
 
@@ -501,7 +501,7 @@ advanced:
 
   # 消息分批大小（字节）- 内部配置，请勿修改
   batch_size:
-    default: 4000
+    默认: 4000
     dingtalk: 20000
     feishu: 30000
     bark: 4000
